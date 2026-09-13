@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>МиниКрафт — браузерная игра из блоков</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='10' fill='%236abe30'/><rect y='10' width='16' height='6' fill='%238a5a2b'/></svg>" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+
+  <div id="hud-top">
+    <div id="logo">⛏️ МиниКрафт</div>
+    <div id="stats"><span id="fps">60 FPS</span> · <span id="pos">0, 0</span></div>
+    <div id="buttons">
+      <button id="btn-help" title="Помощь">?</button>
+      <button id="btn-new" title="Новый мир">🌍</button>
+      <button id="btn-save" title="Сохранить">💾</button>
+    </div>
+  </div>
+
+  <div id="hotbar"></div>
+
+  <div id="help" class="hidden">
+    <div class="help-card">
+      <h2>Как играть</h2>
+      <ul>
+        <li><b>A / D</b> или <b>← / →</b> — движение</li>
+        <li><b>W / Space / ↑</b> — прыжок</li>
+        <li><b>ЛКМ</b> — разрушить блок</li>
+        <li><b>ПКМ</b> — поставить блок</li>
+        <li><b>1–7</b> или колесо мыши — выбор блока</li>
+        <li><b>F</b> — режим полёта вкл/выкл (в полёте: W/S вверх/вниз)</li>
+      </ul>
+      <p>Мир сохраняется автоматически в браузере. Кнопка 🌍 создаёт новый мир.</p>
+      <button id="btn-close-help">Играть!</button>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+</div>
+<script src="main.js"></script>
+</body>
+</html>
