@@ -1,0 +1,61 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { width: 100%; height: 100%; overflow: hidden; background: #87ceeb; font-family: "Segoe UI", system-ui, sans-serif; }
+#app { position: fixed; inset: 0; }
+#game { display: block; width: 100%; height: 100%; cursor: crosshair; }
+
+#crosshair {
+  position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  color: #fff; font-size: 28px; font-weight: bold; mix-blend-mode: difference;
+  pointer-events: none; user-select: none; z-index: 5;
+}
+#hint {
+  position: fixed; top: 10px; left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,.45); color: #fff; font-size: 13px;
+  padding: 6px 14px; border-radius: 20px; pointer-events: none;
+  white-space: nowrap; z-index: 5;
+}
+#hotbar {
+  position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 6px; z-index: 5;
+  background: rgba(0,0,0,.45); padding: 6px; border-radius: 10px;
+  border: 2px solid rgba(255,255,255,.25);
+}
+.slot {
+  width: 56px; height: 56px; border-radius: 8px; cursor: pointer;
+  border: 2px solid transparent; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; color: #fff;
+  background: rgba(255,255,255,.08); position: relative; user-select: none;
+}
+.slot.active { border-color: #fff; background: rgba(255,255,255,.2); }
+.slot canvas { width: 32px; height: 32px; image-rendering: pixelated; border-radius: 4px; }
+.slot span { font-size: 11px; margin-top: 2px; text-shadow: 0 1px 2px #000; }
+.slot b { position: absolute; top: 1px; left: 5px; font-size: 11px; opacity: .7; }
+
+#menu {
+  position: fixed; inset: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(10, 20, 10, .55); backdrop-filter: blur(3px);
+}
+#menu.hidden { display: none; }
+.card {
+  background: #2b2b2b; color: #fff; padding: 28px 32px; border-radius: 12px;
+  max-width: 440px; width: calc(100% - 40px); text-align: center;
+  border: 3px solid #555; box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+.card h1 { margin-bottom: 8px; }
+.card p { opacity: .85; margin-bottom: 12px; }
+.card ul { text-align: left; font-size: 14px; line-height: 1.7; margin: 0 0 18px 18px; opacity: .9; }
+#play {
+  font-size: 18px; padding: 12px 48px; border: none; border-radius: 8px;
+  background: #5cb531; color: #fff; font-weight: bold; cursor: pointer;
+  box-shadow: inset 0 -4px 0 rgba(0,0,0,.3);
+}
+#play:hover { background: #6cc53e; }
+.note { margin-top: 12px; font-size: 12px; opacity: .6; }
+
+#toast {
+  position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%);
+  background: rgba(0,0,0,.7); color: #fff; padding: 8px 18px; border-radius: 8px;
+  font-size: 14px; opacity: 0; transition: opacity .3s; pointer-events: none; z-index: 6;
+}
+#toast.show { opacity: 1; }
