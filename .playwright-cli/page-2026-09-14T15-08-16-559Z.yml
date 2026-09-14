@@ -1,0 +1,32 @@
+- generic [ref=e2]:
+  - generic: +
+  - generic: ЛКМ — сломать · ПКМ — поставить · 1–6 — блоки · F — полёт · R — новый мир
+  - generic [ref=e4]:
+    - generic [ref=e5] [cursor=pointer]:
+      - generic [ref=e6]: "1"
+      - generic [ref=e8]: Трава
+    - generic [ref=e9] [cursor=pointer]:
+      - generic [ref=e10]: "2"
+      - generic [ref=e12]: Земля
+    - generic [ref=e13] [cursor=pointer]:
+      - generic [ref=e14]: "3"
+      - generic [ref=e16]: Камень
+    - generic [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]: "4"
+      - generic [ref=e20]: Дерево
+    - generic [ref=e21] [cursor=pointer]:
+      - generic [ref=e22]: "5"
+      - generic [ref=e24]: Листва
+    - generic [ref=e25] [cursor=pointer]:
+      - generic [ref=e26]: "6"
+      - generic [ref=e28]: Доски
+  - generic [ref=e30]:
+    - heading "⛏️ Мини-Майнкрафт" [level=1] [ref=e31]
+    - paragraph [ref=e32]: Воксельный мир 32×32. Строй, ломай, исследуй.
+    - list [ref=e33]:
+      - listitem [ref=e34]: WASD — движение, мышь — обзор
+      - listitem [ref=e35]: Пробел — прыжок / вверх в полёте, Shift — вниз в полёте
+      - listitem [ref=e36]: ЛКМ — сломать блок, ПКМ — поставить блок
+      - listitem [ref=e37]: 1–6 — выбор блока, F — режим полёта, R — новый мир
+    - button "▶ Играть" [ref=e38] [cursor=pointer]
+    - generic [ref=e39]: Клик захватывает мышь (Pointer Lock). Esc — выйти из захвата.
