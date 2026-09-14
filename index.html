@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Мини-Майнкрафт — воксельная игра</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛏️</text></svg>" />
+<link rel="stylesheet" href="css/style.css" />
+<script type="importmap">
+{
+  "imports": {
+    "three": "./js/vendor/three.module.js"
+  }
+}
+</script>
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+
+  <div id="crosshair">+</div>
+  <div id="hint">ЛКМ — сломать · ПКМ — поставить · 1–6 — блоки · F — полёт · R — новый мир</div>
+
+  <div id="hotbar"></div>
+
+  <div id="menu">
+    <div class="card">
+      <h1>⛏️ Мини-Майнкрафт</h1>
+      <p>Воксельный мир 32×32. Строй, ломай, исследуй.</p>
+      <ul>
+        <li><b>WASD</b> — движение, <b>мышь</b> — обзор</li>
+        <li><b>Пробел</b> — прыжок / вверх в полёте, <b>Shift</b> — вниз в полёте</li>
+        <li><b>ЛКМ</b> — сломать блок, <b>ПКМ</b> — поставить блок</li>
+        <li><b>1–6</b> — выбор блока, <b>F</b> — режим полёта, <b>R</b> — новый мир</li>
+      </ul>
+      <button id="play">▶ Играть</button>
+      <div class="note">Клик захватывает мышь (Pointer Lock). Esc — выйти из захвата.</div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+</div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
